@@ -1,0 +1,26 @@
+$stable: #C7C1BA;
+$energized: #A0866C;
+$dark: #47352B;
+$link-color: $energized;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+ion-view,.pane,.view {
+	background-color: #C7C1BA;
+}
+
+body {
+	color: #47352B;
+}
+
+body.platform-ios {
+	font-family: 'Poppins', sans-serif;
+}
+
+.ionic-body.platform-ios {
+	font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
+	font-family: inherit;
+}
+

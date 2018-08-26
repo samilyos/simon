@@ -1,0 +1,193 @@
+<ion-view title="Crypto Technical Analysis" id="page11" on-double-tap="scrollTop()" cache-view="false">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-android-arrow-back" ui-sref="tabsController.cryptoCurrency()"></button>
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-subheader">
+  <iframe src='/ticker/crypto.html' width='100%' height='28' scrolling='no' frameborder='0'></iframe>
+</ion-header-bar>
+  <ion-content padding="true" class="has-header has-subheader">
+
+   <ion-list id="notifications-list2">
+      <div>
+        <div ng-click="showMessage = ! showMessage">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/btc.png">
+        <h2dark><strong>BTC</strong>
+          <p>بيتكوين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/btc.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage1 = ! showMessage1">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/eth.png">
+        <h2dark><strong>ETH</strong>
+          <p>إيثيريوم</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage1">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/eth.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage2 = ! showMessage2">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/ltc.png">
+        <h2dark><strong>LTC</strong>
+          <p>لايتكوين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage2">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ltc.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage3 = ! showMessage3">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/xrp.png">
+        <h2dark><strong>XRP</strong>
+          <p>ريبيل</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage3">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/xrp.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage4 = ! showMessage4">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/bcc.png">
+        <h2dark><strong>BCC</strong>
+          <p>بيتكونيكت</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage4">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/bcc.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage5 = ! showMessage5">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/trx.png">
+        <h2dark><strong>TRX</strong>
+          <p>ترون</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage5">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/trx.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage6 = ! showMessage6">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/xvg.png">
+        <h2dark><strong>XVG</strong>
+          <p>فيرج</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage6">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/xvg.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage7 = ! showMessage7">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/neo.png">
+        <h2dark><strong>NEO</strong>
+          <p>نيو</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage7">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/neo.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage8 = ! showMessage8">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/ada.png">
+        <h2dark><strong>ADA</strong>
+          <p>كاردانو</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage8">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ada.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage9 = ! showMessage9">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/xlm.png">
+        <h2dark><strong>XLM</strong>
+          <p>ستيلار</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage9">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/xlm.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage10 = ! showMessage10">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/crypto/iota.png">
+        <h2dark><strong>IOTA</strong>
+          <p>أيوتا</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage10">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/iota.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    </div>
+    </ion-list> 
+    
+    
+  </ion-content>
+</ion-view>

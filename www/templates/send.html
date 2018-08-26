@@ -1,0 +1,31 @@
+<ion-view title="Send" id="page5" cache-view="false" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+  <ion-content padding="true" class="has-header">
+    <ion-refresher on-refresh="doRefresh()" pulling-text="Pull to reset">
+
+    </ion-refresher>
+    <div class="spacer" style="height: 20px;"></div>
+    <form id="send-form1" class="list animated slideInLeft">
+      <label class="item item-input" id="send-input2" style="border-radius: 5px;">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="" dir="auto" ng-model="message.name">
+      </label>
+      <div class="spacer" style="height: 10px;"></div>
+      <div id="send-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#47352B;">
+          <strong>Section</strong>
+        </p>
+      </div>
+      <ion-radio id="send-radio2" style="border-radius: 5px 5px 0 0" ng-model="message.section" ng-value="'cryptocurrency'">CryptoCurrency</ion-radio>
+      <ion-radio id="send-radio4" style="border-radius: 0 0 5px 5px" ng-model="message.section" ng-value="'forex'">FOREX</ion-radio>
+      <div class="spacer" style="height: 10px;"></div>
+      <label class="item item-input" id="send-textarea1" style="border-radius: 5px;">
+        <span class="input-label">Message</span><textarea placeholder="" dir="auto" rows="5" ng-model="message.message"></textarea></label>
+    </form>
+    <div ng-show="pathForImage(image)" align="center"><p>Attachment ready! Press upload</p></div>
+    <div class="row">
+      <div class="col-50" style="padding: 5px;"><button class="button icon-left ion-camera button-energized button-block animated slideInLeft" ng-click="loadImage()">Take Photo</button></div>
+      <div class="col-50" style="padding: 5px;"><button class="button icon-left ion-upload button-energized button-block animated slideInRight" ng-click="uploadImage()" ng-disabled="image === null">Upload</button></div>
+    </div>
+    <a ui-sref="tabsController.thankYou()" id="send-button1" class="button button-dark button-block animated slideInRight" style="border-radius: 25px;" ng-click="send()">Send</a>
+  </ion-content>
+</ion-view>

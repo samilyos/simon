@@ -1,0 +1,193 @@
+<ion-view title="FOREX Technical Analysis" id="page11" on-double-tap="scrollTop()" cache-view="false">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-android-arrow-back" ui-sref="tabsController.fOREX()"></button>
+  </ion-nav-buttons>
+  <ion-header-bar class="bar-subheader">
+  <iframe src='https://swissfs.sa.com/forex-quotes/api.php?token=1d31e6a672d5649cb7146e120b16ebd2' width='100%' height='28' scrolling='no' frameborder='0'></iframe>
+</ion-header-bar>
+  <ion-content padding="true" class="has-header has-subheader">
+
+   <ion-list id="notifications-list2">
+      <div>
+        <div ng-click="showMessage = ! showMessage">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/eusd.png">
+        <h2dark><strong>EUR/USD</strong>
+          <p>اليورو/دولار</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/eusd.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage1 = ! showMessage1">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/ujpy.png">
+        <h2dark><strong>USD/JPY</strong>
+          <p>الدولار/ين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage1">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ujpy.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage2 = ! showMessage2">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/gjpy.png">
+        <h2dark><strong>GBP/JPY</strong>
+          <p>الباوند/ين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage2">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/gjpy.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage3 = ! showMessage3">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/ucad.png">
+        <h2dark><strong>USD/CAD</strong>
+          <p>الدولار/كندي</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage3">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ucad.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage4 = ! showMessage4">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/utry.png">
+        <h2dark><strong>USD/TRY</strong>
+          <p>الدولار/تركي</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage4">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/utry.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage5 = ! showMessage5">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/ejpy.png">
+        <h2dark><strong>EUR/JPY</strong>
+          <p>يورو/ين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage5">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ejpy.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage6 = ! showMessage6">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/nusd.png">
+        <h2dark><strong>NZD/USD</strong>
+          <p>نيوزيلاندي/دولار</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage6">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/nusd.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage7 = ! showMessage7">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/ausd.png">
+        <h2dark><strong>AUD/USD</strong>
+          <p>استرالي/دولار</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage7">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/ausd.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage8 = ! showMessage8">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/njpy.png">
+        <h2dark><strong>NZD/JPY</strong>
+          <p>نيوزيلاندي/ين</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage8">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/njpy.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage9 = ! showMessage9">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/uchf.png">
+        <h2dark><strong>USD/CHF</strong>
+          <p>الدولار/فرنك</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage9">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/uchf.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    <div ng-click="showMessage10 = ! showMessage10">
+      <ion-item class="item-avatar dark animated fadeIn" id="notifications-list-item7" style="border-radius: 10px;">
+        <img src="img/currency/xau.png">
+        <h2dark><strong>XAU</strong>
+          <p>الذهب</p>
+        </h2dark>
+      </ion-item>
+      <div ng-show="showMessage10">
+        <ion-item class="item assertive item-text-wrap animated slideInLeft" id="home-list-item13" style="border-radius: 10px; height: 450px; padding: 0px;">
+        <h2assertive>
+          <iframe src='/ta/xau.html' width='100%' height='100%' scrolling='no' frameborder='0'></iframe>
+        </h2assertive>
+      </ion-item>
+      </div>
+    <div class="spacer" style="height: 10px;"></div>
+    </div>
+    </div>
+    </ion-list> 
+    
+    
+  </ion-content>
+</ion-view>

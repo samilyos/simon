@@ -1,0 +1,56 @@
+<ion-view title="FOREX" id="page4" on-double-tap="scrollTop()" cache-view="false" on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-ios-speedometer" ui-sref="forexTechAnalysis()"></button>
+    <button class="button button-icon icon ion-pie-graph" ui-sref="forexCharts()"></button>
+    <button class="button button-icon icon ion-ios-calendar" ui-sref="forexEventsCalendar()"></button>
+    <button class="button button-icon icon ion-social-rss" ui-sref="forexNews()"></button>
+  </ion-nav-buttons>
+  
+  <ion-header-bar class="bar-subheader">
+  <iframe src='https://swissfs.sa.com/forex-quotes/api.php?token=d1f813ec19f7bf0ad5409e6d7857c750' width='100%' height='28' scrolling='no' frameborder='0'></iframe>
+</ion-header-bar>
+  <ion-content padding="true" class="has-header has-subheader">
+    <div ng-init="doRefresh()"></div>
+    <ion-refresher on-refresh="doRefresh()" pulling-text="Pull to refresh">
+
+      </ion-refresher>
+    <form id="home-form3" class="list">
+      <div class="spacer" style="height: 10px;"></div>
+      <label class="item item-input" id="home-search1" name="search" style="border-radius: 25px;line-height: 15px;">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search.." style="font-size: 18px" ng-model="input.filterMessage">
+      </label>
+    </form>
+    <div ng-repeat="x in get | limitTo: numberOfItemsToDisplay | filter: input.filterMessage" ng-show="x.Section == 'forex'">
+    <ion-list id="fOREX-list5">
+      <ion-item class="item-avatar dark item-text-wrap" id="fOREX-list-item9" style="border-radius: 10px; background-color: #eae6e3; border: 1px solid #eae6e3;" ng-hide="x.Name == 'Bo2loz'">
+        <img src="img/oPukD89UQ2qhOrlJp7HS_avatar.png" style="margin-top: -8px;">
+        <h2dark><strong>{{x.Name}}</strong><span style="float: right; font-size: 10px; color: #a0866c; font-weight: bold;"><i class="icon ion-calendar" style="color: #a0866c;"></i>&nbsp;{{x.MessageDate}}</span>
+          <p><br></p>
+          <div ng-hide="x.Image == ''">
+            <p style="margin-left: -50px;">
+            <img src="https://elhakeemapp.com/sw/uploads/{{x.Image}}" style="border-radius: 10px; width: 100%;">
+          </p>
+          </div>
+          <p dir="auto" style="color: #3a322e; text-align: justify; margin-left: -50px;">{{x.Message}}</p>
+        </h2dark>
+      </ion-item>
+      <ion-item class="item-avatar dark item-text-wrap" id="fOREX-list-item10" style="border-radius: 10px;" ng-show="x.Name == 'Bo2loz'">
+        <img src="img/aqsK9c6LTYy2doQrvLhv_swavatar.png" style="margin-top: -8px;">
+        <h2dark><strong>S<span style="font-size: 12px;">&amp;</span>W</strong><span style="float: right; font-size: 10px; color: #a0866c; font-weight: bold;"><i class="icon ion-arrow-down-a" style="color: #f00808; font-weight: bold; font-size: 14px;" ng-show="x.Status == '' || x.Status == '2'"></i><i class="icon ion-arrow-up-a" style="color: #14b005; font-weight: bold; font-size: 14px;" ng-show="x.Status == '1' || x.Status == '2'"></i>&nbsp;<i class="icon ion-calendar" style="color: #a0866c;"></i>&nbsp;{{x.MessageDate}}</span>
+          <p><br></p>
+          <div ng-hide="x.Image == ''">
+            <img src="https://elhakeemapp.com/sw/uploads/{{x.Image}}" style="border-radius: 10px; width: 100%; height: auto;">
+          </div>   
+          <p dir="auto" style="color: #3a322e; text-align: justify; margin-left: -50px;">{{x.Message}}</p>
+        </h2dark>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height: 10px;"></div>
+  </div>
+    <ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="3%">
+  </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
