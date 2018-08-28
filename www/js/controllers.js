@@ -28,7 +28,7 @@ $scope.doRefresh = function() {
 
 $scope.numberOfItemsToDisplay = 10;
 
-$http.get("https://elhakeemapp.com/sw/get.php")
+$http.get("https://elhakeemapp.com/sw/demo/get.php")
   .success(function (response) {$ionicLoading.hide(); $scope.get = response.records;});
 
   $scope.loadMore = function() {
@@ -90,7 +90,7 @@ $scope.doRefresh = function() {
 
 $scope.numberOfItemsToDisplay = 10;
 
-$http.get("https://elhakeemapp.com/sw/get.php")
+$http.get("https://elhakeemapp.com/sw/demo/get.php")
   .success(function (response) {$ionicLoading.hide(); $scope.get = response.records;});
 
   $scope.loadMore = function() {
@@ -222,7 +222,7 @@ $ionicLoading.show({
   });
 
   // Destination URL
-  var url = "https://elhakeemapp.com/sw/upload.php";
+  var url = "https://elhakeemapp.com/sw/demo/upload.php";
 
   // File for Upload
   var targetPath = $scope.pathForImage($scope.image);
@@ -250,7 +250,7 @@ $ionicLoading.show({
       $scope.send = function() {
 
     $http({
-        url: "https://elhakeemapp.com/sw/send.php",
+        url: "https://elhakeemapp.com/sw/demo/send.php",
         method: "POST",
         data: {
             'name': $scope.message.name,
